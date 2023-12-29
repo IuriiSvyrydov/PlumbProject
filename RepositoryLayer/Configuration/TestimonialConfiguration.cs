@@ -15,5 +15,14 @@ public class TestimonialConfiguration: IEntityTypeConfiguration<Testimonial>
         builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
         builder.Property(x => x.FileName).IsRequired();
         builder.Property(x => x.FileType).IsRequired();
+        builder.HasData(new Testimonial
+        {
+            Id = 1,
+            Comment = "test Comment",
+            Title = "test",
+            FullName = "ferro5",
+            FileName = "test",
+            FileType = "test",
+        });
     }
 }

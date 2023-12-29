@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using RepositoryLayer.Context;
 using RepositoryLayer.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbConfiguration(builder.Configuration);
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

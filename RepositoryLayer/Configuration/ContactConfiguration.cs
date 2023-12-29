@@ -15,6 +15,14 @@ public class ContactConfiguration: IEntityTypeConfiguration<Contact>
         builder.Property(x => x.Email).IsRequired().HasMaxLength(100);
         builder.Property(x => x.Call).IsRequired().HasMaxLength(17);
         builder.Property(x => x.Map).IsRequired();
+        builder.HasData(new Contact
+        {
+            Id = 1,
+            Call = "123-456-789",
+            Email = "test@test.com",
+            Location = "Kharkiv",
+            Map = "link is here"
+        });
     }
 
 }

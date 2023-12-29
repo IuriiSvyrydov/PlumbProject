@@ -12,8 +12,7 @@
 
   <ItemGroup>
     <Folder Include="DataSeed\" />
-    <Folder Include="UnitOfWork\" />
-    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Concrete\" />
   </ItemGroup>
 
   <ItemGroup>

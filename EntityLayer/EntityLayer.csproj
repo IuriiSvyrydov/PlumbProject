@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="WevApplication\ViewModels\" />
+    <ProjectReference Include="..\CoreLayer\CoreLayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoreLayer\CoreLayer.csproj" />
+    <Folder Include="WevApplication\ViewModels\ContactVM\" />
+    <Folder Include="WevApplication\ViewModels\HomePageVM\" />
+    <Folder Include="WevApplication\ViewModels\TestimonialVM\" />
+    <Folder Include="WevApplication\ViewModels\SocialMediaVM\" />
+    <Folder Include="WevApplication\ViewModels\PortfolioVM\" />
   </ItemGroup>
 
 </Project>

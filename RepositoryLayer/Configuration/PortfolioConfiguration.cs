@@ -14,5 +14,20 @@ public class PortfolioConfiguration: IEntityTypeConfiguration<Portfolio>
         builder.Property(x => x.Title).IsRequired().HasMaxLength(10);
         builder.Property(x => x.FileName).IsRequired();
         builder.Property(x => x.FileType).IsRequired();
+        builder.HasData(new Portfolio
+        {
+            Id = 1,
+            CategoryId = 1,
+            FileName = "test",
+            FileType = "test picture",
+            Title = "test title"
+        }, new Portfolio
+        {
+            Id = 2,
+            CategoryId = 2,
+            FileName = "test2",
+            FileType = "test2",
+            Title = "test picture"
+        });
     }
 }

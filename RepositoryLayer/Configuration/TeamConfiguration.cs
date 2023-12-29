@@ -15,5 +15,16 @@ public class TeamConfiguration: IEntityTypeConfiguration<Team>
         builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
         builder.Property(x => x.FileName).IsRequired();
         builder.Property(x => x.FileType).IsRequired();
+        builder.HasData(new Team
+        {
+            Id = 1,
+            FullName = "ferro5",
+            Title = "test",
+            FaceBook = "testFacebook",
+            Instagram = "testInstagram",
+            FileName = "test",
+            FileType = "test"
+        });
+
     }
 }

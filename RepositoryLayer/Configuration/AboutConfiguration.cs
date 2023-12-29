@@ -37,7 +37,8 @@ public class AboutConfiguration : IEntityTypeConfiguration<About>
             HardWorkers = 3,
             FileName = "test",
             FileType = "test",
-            SocialMediaId = 1
+            SocialMediaId = 1,
+           
         });
 
     }

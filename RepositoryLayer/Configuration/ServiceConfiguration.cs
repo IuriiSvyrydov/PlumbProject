@@ -14,5 +14,12 @@ public class ServiceConfiguration: IEntityTypeConfiguration<Service>
         builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
         builder.Property(x => x.Description).IsRequired().HasMaxLength(2000);
         builder.Property(x => x.Icon).IsRequired().HasMaxLength(100);
+        builder.HasData(new Service
+        {
+            Id = 1,
+            Icon = "bi bi-icon",
+            Name = "test service",
+            Description = " test Description"
+        });
     }
 }

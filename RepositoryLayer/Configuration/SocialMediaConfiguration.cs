@@ -11,5 +11,11 @@ public class SocialMediaConfiguration: IEntityTypeConfiguration<SocialMedia>
         builder.Property(x => x.CreateDate).IsRequired().HasMaxLength(10);
         builder.Property(x => x.UpdateDate).IsRequired().HasMaxLength(10);
         builder.Property(x => x.RowVersion).IsRowVersion();
+        builder.HasData(new SocialMedia
+        {
+            Id = 1,
+            FaceBook = "testFaceBook",
+            Instagram = "testInstagram"
+        });
     }
 }

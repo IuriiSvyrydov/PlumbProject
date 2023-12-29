@@ -8,14 +8,15 @@ public class AppDbContext :DbContext
 {
     public AppDbContext()
     {
-        
+
     }
 
-    public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
+    public AppDbContext(DbContextOptions<AppDbContext>options):base(options)
     {
         
     }
 
+   
     public DbSet<HomePage> HomePages { get; set; }
     public DbSet<About> AboutUs { get; set; }
     public DbSet<Category> Categories { get; set; }
@@ -28,7 +29,7 @@ public class AppDbContext :DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        base.OnModelCreating(modelBuilder);
+         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+         base.OnModelCreating(modelBuilder);
     }
 }
