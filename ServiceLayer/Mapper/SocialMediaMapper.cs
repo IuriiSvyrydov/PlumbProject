@@ -1,6 +1,15 @@
-﻿namespace ServiceLayer.Mapper;
+﻿using AutoMapper;
+using EntityLayer.WevApplication.Entities;
+using EntityLayer.WevApplication.ViewModels.SocialMediaVM;
 
-public class SocialMediaMapper
+namespace ServiceLayer.Mapper;
+
+public class SocialMediaMapper: Profile
 {
-    
+    public SocialMediaMapper()
+    {
+        CreateMap<SocialMedia, SocialMediaListVM>().ReverseMap();
+        CreateMap<SocialMedia, AddSocialMediaVM>().ReverseMap();
+        CreateMap<SocialMedia, UpdateSocialMediaVM>().ReverseMap();
+    }
 }

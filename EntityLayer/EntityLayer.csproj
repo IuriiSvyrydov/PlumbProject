@@ -14,7 +14,6 @@
     <Folder Include="WevApplication\ViewModels\ContactVM\" />
     <Folder Include="WevApplication\ViewModels\HomePageVM\" />
     <Folder Include="WevApplication\ViewModels\TestimonialVM\" />
-    <Folder Include="WevApplication\ViewModels\SocialMediaVM\" />
     <Folder Include="WevApplication\ViewModels\PortfolioVM\" />
   </ItemGroup>
 
