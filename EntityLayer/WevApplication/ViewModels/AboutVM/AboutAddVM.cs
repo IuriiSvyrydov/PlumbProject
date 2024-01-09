@@ -1,4 +1,6 @@
-﻿using EntityLayer.WevApplication.ViewModels.SocialMediaVM;
+﻿using System.ComponentModel;
+using EntityLayer.WevApplication.ViewModels.SocialMediaVM;
+using Microsoft.AspNetCore.Http;
 
 namespace EntityLayer.WevApplication.ViewModels.AboutVM;
 
@@ -14,5 +16,7 @@ public class AboutAddVM
     public string FileType { get; set; } = null!;
     public int SocialMediaId { get; set; }
     public SocialMediaListVM SocialMedia { get; set; } = null!;
+    [DisplayName("Photo")]
+    public IFormFile Photo { get; set; } = null!;
 
 }

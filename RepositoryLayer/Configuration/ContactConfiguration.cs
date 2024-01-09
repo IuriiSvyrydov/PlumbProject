@@ -9,7 +9,7 @@ public class ContactConfiguration: IEntityTypeConfiguration<Contact>
     public void Configure(EntityTypeBuilder<Contact> builder)
     {
         builder.Property(x => x.CreateDate).IsRequired().HasMaxLength(10);
-        builder.Property(x => x.UpdateDate).IsRequired().HasMaxLength(10);
+        builder.Property(x => x.UpdateDate).HasMaxLength(10);
         builder.Property(x => x.RowVersion).IsRowVersion();
         builder.Property(x => x.Location).IsRequired().HasMaxLength(200);
         builder.Property(x => x.Email).IsRequired().HasMaxLength(100);

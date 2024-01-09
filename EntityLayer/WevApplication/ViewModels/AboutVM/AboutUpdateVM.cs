@@ -1,4 +1,5 @@
 ﻿using EntityLayer.WevApplication.ViewModels.SocialMediaVM;
+using Microsoft.AspNetCore.Http;
 
 namespace EntityLayer.WevApplication.ViewModels.AboutVM;
 
@@ -17,6 +18,7 @@ public class AboutUpdateVM
     public string FileName { get; set; } = null!;
     public string FileType { get; set; } = null!;
     public int SocialMediaId { get; set; }
+    public IFormFile Photo { get; set; } = null!;
     public UpdateSocialMediaVM SocialMedia { get; set; } = null!;
 
 }

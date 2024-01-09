@@ -30,8 +30,7 @@ public class AboutService: IAboutService
 
     public async Task<List<AboutListVM>> GetAllListAsync()
     {
-        var aboutListVm = await _unitOfWork.GetGenericRepository<About>()
-            .GetAllList()
+        var aboutListVm = await _repository.GetAllList()
             .ProjectTo<AboutListVM>(_mapper.ConfigurationProvider)
             .ToListAsync();
         return aboutListVm;
@@ -56,7 +55,8 @@ public class AboutService: IAboutService
 
     public async Task<AboutUpdateVM> GetById(int id)
     {
-        var about = await _repository.Where(x => x.Id == id).ProjectTo<AboutUpdateVM>(_mapper.ConfigurationProvider)
+        var about = await _repository.Where(x => x.Id == id)
+            .ProjectTo<AboutUpdateVM>(_mapper.ConfigurationProvider)
             .SingleAsync();
         return about;
 

@@ -9,7 +9,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     public void Configure(EntityTypeBuilder<Category> builder)
     {
         builder.Property(x => x.CreateDate).IsRequired().HasMaxLength(10);
-        builder.Property(x => x.UpdateDate).IsRequired().HasMaxLength(10);
+        builder.Property(x => x.UpdateDate).HasMaxLength(10);
         builder.Property(x => x.RowVersion).IsRowVersion();
         builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
         builder.HasData(new Category

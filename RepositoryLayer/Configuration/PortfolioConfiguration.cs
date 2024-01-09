@@ -9,9 +9,9 @@ public class PortfolioConfiguration: IEntityTypeConfiguration<Portfolio>
     public void Configure(EntityTypeBuilder<Portfolio> builder)
     {
         builder.Property(x => x.CreateDate).IsRequired().HasMaxLength(10);
-        builder.Property(x => x.UpdateDate).IsRequired().HasMaxLength(10);
+        builder.Property(x => x.UpdateDate).HasMaxLength(10);
         builder.Property(x => x.RowVersion).IsRowVersion();
-        builder.Property(x => x.Title).IsRequired().HasMaxLength(10);
+        builder.Property(x => x.Title).IsRequired().HasMaxLength(30);
         builder.Property(x => x.FileName).IsRequired();
         builder.Property(x => x.FileType).IsRequired();
         builder.HasData(new Portfolio
@@ -19,7 +19,7 @@ public class PortfolioConfiguration: IEntityTypeConfiguration<Portfolio>
             Id = 1,
             CategoryId = 1,
             FileName = "test",
-            FileType = "test picture",
+            FileType = "test",
             Title = "test title"
         }, new Portfolio
         {
@@ -27,7 +27,7 @@ public class PortfolioConfiguration: IEntityTypeConfiguration<Portfolio>
             CategoryId = 2,
             FileName = "test2",
             FileType = "test2",
-            Title = "test picture"
+            Title = "test title2"
         });
     }
 }

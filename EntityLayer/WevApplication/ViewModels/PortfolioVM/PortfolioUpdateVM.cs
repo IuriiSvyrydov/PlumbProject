@@ -6,8 +6,8 @@ namespace EntityLayer.WevApplication.ViewModels.PortfolioVM;
 public class PortfolioUpdateVM
 {
     public int Id { get; set; }
-    public string UpdateDate { get; set; } 
-    public byte[] RowVersion { get; set; }
+    public string UpdateDate { get; set; }
+    public byte[] RowVersion { get; set; } = null!;
 
     public string Title { get; set; } = null!;
     public string FileName { get; set; } = null!;

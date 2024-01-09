@@ -9,7 +9,7 @@ public class TestimonialConfiguration: IEntityTypeConfiguration<Testimonial>
     public void Configure(EntityTypeBuilder<Testimonial> builder)
     {
         builder.Property(x => x.CreateDate).IsRequired().HasMaxLength(10);
-        builder.Property(x => x.UpdateDate).IsRequired().HasMaxLength(10);
+        builder.Property(x => x.UpdateDate).HasMaxLength(10);
         builder.Property(x => x.RowVersion).IsRowVersion();
         builder.Property(x => x.Comment).IsRequired().HasMaxLength(2000);
         builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
